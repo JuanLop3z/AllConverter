@@ -24,6 +24,7 @@ public class Procesos {
 
         DecimalFormat df = new DecimalFormat();
         JOptionPane.showMessageDialog(null, "Kilos: " + df.format(resultado));
+        librasxKilos();
     }
 
     public static void Temperatura() {
@@ -64,6 +65,7 @@ public class Procesos {
                     break;
             }
         } while (opcion_menu == 3);
+        Temperatura();
     }
 
     public static void Calorias() {
@@ -106,9 +108,20 @@ public class Procesos {
                     break;
             }
         } while (opcion_menu == 3);
-
+        Calorias();
     }
 
+    public static void tiempo(){
+        double min = 1440;
+        String num = JOptionPane.showInputDialog("Ingrese los minutos");
 
+        double minutos = Integer.parseInt(num);
+
+        double resultado = minutos / min;
+
+        DecimalFormat df = new DecimalFormat();
+        JOptionPane.showMessageDialog(null, "Dias: " + df.format(resultado));
+        tiempo();
+    }
 
 }

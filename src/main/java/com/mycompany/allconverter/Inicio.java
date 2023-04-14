@@ -16,7 +16,7 @@ public class Inicio {
         
         int opcion_menu = 0;
         
-        String[] botones = {"1.Libras a Kilos", "2.Temperatura", "3.Calorias"};
+        String[] botones = {"1.Libras a Kilos", "2.Temperatura", "3.Calorias", "4.Minutos a Dias"};
 
         do {
             String opcion = (String) JOptionPane.showInputDialog(null, "Convertidor", "Menu Principal", JOptionPane.INFORMATION_MESSAGE,
@@ -40,13 +40,17 @@ public class Inicio {
 
                 case 2:
                     Procesos.Calorias();
-                    break;
 
+                    break;
+                case 3:
+                    Procesos.tiempo();
+
+                    break;
                 default:
                     break;
             }
             
-        } while (opcion_menu == 6);
+        } while (opcion_menu == 4);
         
     }
 }
